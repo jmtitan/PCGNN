@@ -37,7 +37,7 @@ Novelty includes:
 - Independent experimental research results MCABlock, a module that introduces implicit ensemble ideas and attention mechanisms in the field of parking space detection, to accelerate model convergence
 - Introducing csl (Circular Smooth Labels) and dcl (Densely Coded Labels) in the field of parking space detection to further improve angle prediction accuracy
 
-**Model comparison**
+## Introduction Model comparison
 
 ![result](assets/Result.jpg)
 
