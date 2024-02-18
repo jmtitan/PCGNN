@@ -67,7 +67,7 @@ Novelty includes:
 | pcgnn-vgg16-dcl[4] | 88.0987 | 38.784225 | 74.41              | **80.90**         | 82.16          | 71.71             | 79.69          | **59.54**        | 68.42         |
 | pcgnn-vgg16-csl    | 88.1438 | 38.9603   | **74.86**          | 80.54             | **82.17**      | **79.53**         | **80.12**      | 58.24            | **68.79**     |
 
-**mcab** 消融实验
+**MCAB** ablation experiment
 
 | model              | GFLOPS   | params/M | inference  time/ms | precision-point/% | recall-point/% | precision-angle/% | recall-angle/% | precision-slot/% | recall-slot/% |
 | ------------------ | -------- | -------- | ------------------ | ----------------- | -------------- | ----------------- | -------------- | ---------------- | ------------- |
@@ -104,7 +104,7 @@ Our data will be open source on github. Please reorganize the data according to 
 │       ├── label
 │       ├── img
 ```
-在config中修改将要启用模型的路径。
+
 
 - data_root: &data_root ***
 
