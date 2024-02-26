@@ -22,11 +22,8 @@ As shown in Figure 2, the main idea of CSL [3] is to convert the regression prob
 
 As shown in Figure 3, we introduce the self-developed MCABlock module into the point feature encoder. Some studies [6] believe that one explanation for the good performance of ResNet is that the branch structure (shortcut) of ResNet generates an implicit ensemble model of a large number of sub-models (because every time a branch is encountered, the total path doubles) , even if some paths are deleted, the impact on the model results is smooth. The single-channel architecture obviously does not have this characteristic. The Ensembling model contains several basic models with different initial conditions or structures, and certain performance improvements can be achieved through simple voting. Generally speaking, a characteristic of the ensemble model is that the more members participate in voting, the better the performance of the overall model will be. However, when the number of members is large, as the number of members increases, the improvement in accuracy becomes smaller. We expanded the single-way CONV unit of the original model to a three-way structure by incorporating the 1×1 convolution and identity mapping parts into the 3×3 convolution structure. A three-branch structure that constitutes a single convolutional layer. This branch structure can be defined as
 
-![img](assets/clip_image002.png)
 
-$$
-y_i=f^{3\times3}(y_{i-1})+f^{1\times 1}(y_{i-1})+y_{i-1}
-$$
+$$y_i=f^{3\times3}(y_{i-1})+f^{1\times 1}(y_{i-1})+y_{i-1}$$
 where $y_i,y_{i-1}$ represents the output and input of the module，and $f$ represents the structure including convolutional layer and batch-norm layer. In order to further improve the performance of the module, we introduce channel and spatial attention module CBAM based on multi-branch convolution to accelerate the convergence of the model.
 
 Novelty includes:
