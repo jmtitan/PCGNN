@@ -8,13 +8,13 @@ Our project is driven by studying non-standard parking spaces (parking space lin
 
 Figure 1. Model Structure																														
 
-![image-20220410230723696](assets/image-20220410230723696.png)
+![image-20220410230723696](assets/CSL.png)
 
 ​																											Figure 2.CSL (circular smooth label) 
 
-![image-20220410230824285](assets/image-20220410230824285.png)
+![image-20220410230824285](assets/MCAB.png)
 
-​																					图Figure 3.MCAB(multi-branch convolutional attention block)
+​																					Figure 3.MCAB(multi-branch convolutional attention block)
 
 As shown in Figure 1, our final model mainly consists of two stages. The first stage predicts the corner point and the angle of the corner point, and the second stage predicts the parking space entry line. In the first stage, we choose the pytorch version of YAD2K as the backbone for model feature extraction, and then pass the formed feature maps through the point detector and point feature encoder respectively. The former detects corner point information and the angle and length of the parking space separation line in polar coordinates with the corner point as the origin. The latter obtains the final result of the first stage through bilinear interpolation and feature fusion based on the corner point position information (x, y). High-dimensional corner point location feature information. Among them, N represents the maximum number of predicted corner points in a single image set by the model. In the second stage, through the aggregation of feature information in the first stage through the attention map neural network GAT, the model can obtain and encode the internal connection between the corner positions. Finally, through feature splicing and MLP, it is possible to realize whether each two corner points are Constitute a two-class prediction of parking spaces and output the final parking space detection results.
 
