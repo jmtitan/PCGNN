@@ -78,7 +78,7 @@ Novelty includes:
 | --------- | ------------------------------------------------------------ |
 | OS        | ubuntu18.04                                                  |
 | GPU       | RTX 3090                                                     |
-| CPU       | 14 Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz 内存48G          |
+| CPU       | 14 Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz 48G          |
 | epoch     | 200                                                          |
 | batchsize | 32                                                           |
 | mechanic  | Interplolated AP                                             |
